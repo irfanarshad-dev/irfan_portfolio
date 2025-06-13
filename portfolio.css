@@ -1,44 +1,44 @@
 html {
     scroll-behavior: smooth;
-    }
-*{
+}
+* {
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 1.5;
 }
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
-.Sec01{
-    background-color:rgb(0, 0, 0);
-    width:100%;
+.Sec01 {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
     min-height: 100vh;
     position: relative;
 }
-.logo{
+.logo {
     color: white;
     padding-block: 10px;
     padding-inline: 5px;
     position: absolute;
-    left:100px;
-    top:20px;
+    left: 100px;
+    top: 20px;
 }
-.heading01{
+.heading01 {
     color: white;
     position: absolute;
     top: 350px;
     left: 100px;
     font-size: 2rem;
 }
-.heading03{
+.heading03 {
     color: white;
     position: absolute;
     top: 420px;
     left: 100px;
 }
-.img{
+.img {
     position: absolute;
     right: 100px;
     background-size: contain;
@@ -46,11 +46,22 @@ body{
     clip-path: circle(45% at 50% 50%);
     bottom: 0px;
 }
-.navbar{
+.navbar {
     display: flex;
-    justify-content:center;
+    justify-content: center;
 }
-nav{
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+nav {
     float: left;
     padding: 20px;
     margin: 70px 0px 30px 0px;
@@ -61,113 +72,108 @@ nav{
     border: 1.5px solid rgba(225, 225,255, 0.18);
     border-radius: 100px;
     width: 50%;
-    position:fixed;
+    position: fixed;
     z-index: 100;
-    
 }
-nav a{
-    color:white;
+nav a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
-nav a:hover{
+nav a:hover {
     color: rgba(0, 0, 255, 0.659);
 }
-.Sec02{
-    background-color:black;
-    color:white;
-    width:100%;
+.Sec02 {
+    background-color: black;
+    color: white;
+    width: 100%;
     min-height: 100vh;
 }
-.Sec02 .container{
+.Sec02 .container {
     margin: 5px;
     display: flex;
     flex-direction: row;
 }
-.box1,.box2{
+.box1, .box2 {
     width: 50%;
     height: 770px;
 }
-.box1{
+.box1 {
     background: linear-gradient(rgba(130, 252, 170, 0.9), rgba(1, 1, 1, 0.8)), url(assets/bg.jpg);
     background-size: cover;
     padding-top: 270px;
 }
-.box1 h1{
+.box1 h1 {
     padding-left: 20px;
 }
-.box1 span p{
-    font-family:'PT Sans Narrow', Helvetica, sans-serif;
-    font-size:2vh;
-    text-align:justify;
+.box1 span p {
+    font-family: 'PT Sans Narrow', Helvetica, sans-serif;
+    font-size: 2vh;
+    text-align: justify;
     text-indent: inherit;
-    padding-left:20px;
+    padding-left: 20px;
     padding-right: 30px;
 }
-.box2{
-    padding-top:250px;
+.box2 {
+    padding-top: 250px;
     padding-left: 60px;
     font-family: 'PT Sans Narrow';
 }
-.box2 h2{
-    color:rgba(130, 252, 170, 1);
-    font-style:normal;
-    text-transform:uppercase;
+.box2 h2 {
+    color: rgba(130, 252, 170, 1);
+    font-style: normal;
+    text-transform: uppercase;
     font-size: 1.8vh;
 }
-.box2 h3, ul li{
+.box2 h3, ul li {
     color: silver;
     font-size: 1.5vh;
 }
 
-.Sec03{
+.Sec03 {
     margin: 5px auto;
-    background-color:black;
-    width:100%;
+    background-color: black;
+    width: 100%;
     min-height: 100vh;
     position: relative;
     display: flex;
 }
-.daba1{
+.daba1 {
     width: 50%;
     height: 770px;
     background: linear-gradient(rgba(130, 252, 170, 0.9), rgba(1, 1, 1, 0.8)), url(assets/bg.jpg);
     background-size: cover;
     color: white;
     padding-top: 270px;
-    
 }
-
-.Sec03 h1{
+.Sec03 h1 {
     padding-left: 20px;
 }
-.Sec03 span p{
-    font-family:'PT Sans Narrow', Helvetica, sans-serif;
-    font-size:2vh;
-    text-align:justify;
-    padding-left:20px;
+.Sec03 span p {
+    font-family: 'PT Sans Narrow', Helvetica, sans-serif;
+    font-size: 2vh;
+    text-align: justify;
+    padding-left: 20px;
     padding-right: 30px;
 }
-.daba2{
+.daba2 {
     width: 50%;
     height: 770px;
-    background-color:black;
+    background-color: black;
     color: white;
-    padding-top:250px;
+    padding-top: 250px;
     padding-left: 60px;
 }
-em{
-    color:rgba(130, 252, 170, 1);
+em {
+    color: rgba(130, 252, 170, 1);
     padding-left: 200px;
 }
-
-.languages label{
-    display:block;
-    margin:5px 0;
-    margin-top:10px;
+.languages label {
+    display: block;
+    margin: 5px 0;
+    margin-top: 10px;
 }
-    
-.progress{
+.progress {
     background: rgba(255,255,255,0.1);
     justify-content: flex-start;
     border-radius: 100px;
@@ -177,8 +183,7 @@ em{
     display: flex;
     height: 20px;
     width: 90%;
- }
-    
+}
 .progress-value1 {
     animation: load 3s normal forwards;
     box-shadow: 0 10px 40px -10px red;
@@ -186,8 +191,8 @@ em{
     background: red;
     height: 10px;
     width: 0;
-}   
-.progress-value2{
+}
+.progress-value2 {
     animation: load2 3s normal forwards;
     box-shadow: 0 10px 40px -10px blue;
     border-radius: 100px;
@@ -195,233 +200,332 @@ em{
     height: 10px;
     width: 0;
 }
-.progress-value3{
+.progress-value3 {
     animation: load3 3s normal forwards;
     box-shadow: 0 10px 40px -10px yellow;
     border-radius: 100px;
     background: yellow;
     height: 10px;
     width: 0;
-    }
-.progress-value4{
+}
+.progress-value4 {
     animation: load4 3s normal forwards;
     box-shadow: 0 10px 40px -10px green;
     border-radius: 100px;
     background: green;
     height: 10px;
     width: 0;
-    }
-.progress-value5{
+}
+.progress-value5 {
     animation: load5 3s normal forwards;
     box-shadow: 0 10px 40px -10px orange;
     border-radius: 100px;
     background: orange;
     height: 10px;
     width: 0;
-    }
-
-
+}
 @keyframes load {
-0% { width: 0; }
-100% { width: 88%; }
+    0% { width: 0; }
+    100% { width: 88%; }
 }
 @keyframes load2 {
-0% { width: 0; }
-100% { width: 75%; }
+    0% { width: 0; }
+    100% { width: 75%; }
 }
 @keyframes load3 {
-0% { width: 0; }
-100% { width: 70%; }
+    0% { width: 0; }
+    100% { width: 70%; }
 }
 @keyframes load4 {
-0% { width: 0; }
-100% { width: 60%; }
+    0% { width: 0; }
+    100% { width: 60%; }
 }
 @keyframes load5 {
-0% { width: 0; }
-100% { width: 90%; }
+    0% { width: 0; }
+    100% { width: 90%; }
 }
-
-.Sec04 .cont{
+.Sec04 .cont {
     margin: 5px auto;
-    background-color:black;
+    background-color: black;
     color: white;
-    width:100%;
+    width: 100%;
     min-height: 100vh;
     position: relative;
     display: flex;
 }
-.sub-cont{
-
+.sub-cont {
     width: 50%;
     height: 770px;
     background: linear-gradient(rgba(130, 252, 170, 0.9), rgba(1, 1, 1, 0.8)), url(assets/bg.jpg);
     background-size: cover;
     padding-top: 270px;
 }
-.sub-cont2{
+.sub-cont2 {
     width: 50%;
     height: 770px;
-    padding:270px 70px 0px 70px;
+    padding: 270px 70px 0px 70px;
 }
 input[type="text"],
-input[type="Email"]{
+input[type="Email"] {
     width: 100%;
-    padding: 5px;
-    background-color:rgb(31, 30, 30);
+    padding: 10px;
+    background-color: rgb(31, 30, 30);
     color: dimgrey;
     border: none;
 }
-textarea{
-    background-color:rgb(31, 30, 30);
+textarea {
+    background-color: rgb(31, 30, 30);
     width: 100%;
-    padding: 5px 0 40px 5px;
+    padding: 10px;
+    height: 100px;
 }
-input[type=submit]{
+input[type=submit] {
     background-color: rgba(130, 252, 170, 1);
     padding: 10px;
     border-radius: 20px;
-    color:black;
+    color: black;
 }
-input:focus,textarea:focus{
+input:focus, textarea:focus {
     outline: none;
 }
-.Sec04 .sub-cont h1{
+.Sec04 .sub-cont h1 {
     font-style: normal;
-    padding:70px 30px 0 30px;
+    padding: 70px 30px 0 30px;
 }
-.Sec04 .sub-cont span p{
+.Sec04 .sub-cont span p {
     padding-left: 30px;
 }
+
 /* Media Queries */
-
-/* For Tablets and Medium Screens (up to 1024px) */
 @media (max-width: 1024px) {
-    .heading01 {
-        font-size: 60px;
-        padding-left: 50px;
+    .logo {
+        left: 20px;
     }
-
-    .heading03 {
+    .heading01 {
         font-size: 30px;
-        padding-left: 50px;
+        left: 20px;
+        top: 300px;
     }
-
-    .img {
-        width: 50%;
-    }
-
-    .Sec02 .container, .Sec04 .sub-cont {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .box1, .box2, .daba1, .sub-cont {
-        width: 90%;
-        padding: 20px;
-    }
-
-    nav {
-        width: 100%;
-    }
-
-    nav a {
-        font-size: 18px;
-        padding: 8px;
-    }
-}
-
-/* For Small Tablets and Large Mobiles (up to 768px) */
-@media (max-width: 768px) {
-    .heading01 {
-        font-size: 40px;
-        padding-left: 20px;
-    }
-
     .heading03 {
         font-size: 20px;
-        padding-left: 20px;
+        left: 20px;
+        top: 350px;
     }
-
     .img {
-        width: 80%;
-        margin: auto;
-        display: block;
+        width: 40%;
+        right: 20px;
     }
-
     nav {
-        flex-direction: column;
-        align-items: center;
+        width: 60%;
     }
-
     nav a {
-        padding: 10px 0;
-        width: 100%;
-        text-align: center;
+        font-size: 14px;
+        padding: 5px;
     }
-
-    .Sec02 .container, .Sec04 .sub-cont {
-        flex-direction: column;
-        padding: 10px;
+    .box1, .box2 {
+        padding-top: 200px;
     }
-
-    .box1, .box2, .daba1, .sub-cont {
-        width: 100%;
-        padding: 20px;
+    .daba1, .daba2 {
+        padding-top: 200px;
     }
-
-    .progress {
-        width: 80%;
+    .sub-cont, .sub-cont2 {
+        padding-top: 200px;
     }
 }
 
-/* For Mobile Phones (up to 480px) */
-@media (max-width: 480px) {
-    .heading01 {
-        font-size: 30px;
-        padding-left: 10px;
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 101;
     }
-
-    .heading03 {
-        font-size: 18px;
-        padding-left: 10px;
-    }
-
     nav {
+        display: none;
         flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        font-size: 16px;
-        padding: 8px;
         width: 100%;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: black;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+    }
+    nav.active {
+        display: flex;
+    }
+    nav a {
+        padding: 15px;
+        text-align: center;
+        font-size: 16px;
+    }
+    .logo {
+        left: 10px;
+    }
+    .heading01 {
+        font-size: 25px;
+        left: 10px;
+        top: 200px;
+        position: static;
+        padding: 10px;
         text-align: center;
     }
-
+    .heading03 {
+        font-size: 18px;
+        left: 10px;
+        top: 250px;
+        position: static;
+        padding: 10px;
+        text-align: center;
+    }
     .img {
+        position: static;
+        width: 50%;
+        margin: 20px auto;
+        display: block;
+        opacity: 1;
+    }
+    .Sec02 .container {
+        flex-direction: column;
+    }
+    .box1, .box2 {
         width: 100%;
-        margin: auto;
+        height: auto;
+        padding: 20px;
+    }
+    .box2 {
+        padding-left: 20px;
+    }
+    .Sec03 {
+        flex-direction: column;
+    }
+    .daba1, .daba2 {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    .daba2 {
+        padding-left: 20px;
+    }
+    em {
+        padding-left: 0;
+        text-align: center;
         display: block;
     }
-
-    .box1, .box2, .daba1, .sub-cont {
+    .progress {
         width: 100%;
-        padding: 10px;
     }
-
+    .Sec04 .cont {
+        flex-direction: column;
+    }
+    .sub-cont, .sub-cont2 {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    .sub-cont2 {
+        padding: 20px;
+    }
     input[type="text"],
     input[type="Email"],
     textarea {
-        width: 100%;
+        font-size: 16px;
     }
-
     input[type=submit] {
         width: 100%;
     }
+}
 
-    .progress {
-        width: 100%;
+@media (max-width: 480px) {
+    .heading01 {
+        font-size: 20px;
     }
+    .heading03 {
+        font-size: 16px;
+    }
+    .img {
+        width: 80%;
+        position: relative;
+        top: 140px;
+        opacity: 0.5;
+    }
+    nav{
+        width: 100%;
+        height: auto;
+        position: fixed;
+        background-color:transparent;
+    }
+   nav a {
+  /* Text styling */
+  font-size: 24px;
+  font-weight: 500;
+  color: white; /* Pure white text */
+  text-decoration: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  
+  /* Glass background */
+  background: rgba(130, 139, 194, 0.148); /* Very light glass */
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%); /* Safari */
+  
+  /* Glass border effects */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  
+  /* Spacing and layout */
+  display: inline-block;
+  margin: 15px;
+  
+  /* Lighting effects */
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  
+  /* Animation */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shimmer effect on hover */
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+/* Hover states */
+nav a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 24px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+    .heading01{
+        padding-top:120px;
+    }
+    .heading03{
+        padding-top: 0px;
+    }
+    .logo{
+        padding-top: 20px;
+    }
+    .navbar {
+    top: 0;
+}
 }
