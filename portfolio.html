@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,7 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
       rel="stylesheet"
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -52,10 +52,7 @@
               Hello there! Before talking about qualifications and professional
               abilities, I would like to introduce myself.
             </p>
-
-            <p></p>
           </span>
-
           <span>
             <p>
               I am <i>Irfan Arshad</i> and I am from Pakistan. Taking web
@@ -63,7 +60,6 @@
               heart because it has been my passion since my early teenage.
             </p>
           </span>
-
           <span>
             <p>
               I believe that people should do things in which they are good at
@@ -71,7 +67,6 @@
             </p>
           </span>
         </div>
-
         <div class="box2">
           <h2>Qualification:</h2>
           <h3>Bachelor of Science (Software Engineering)</h3>
@@ -98,9 +93,9 @@
         </span>
         <span>
           <p>
-            I aquired a quite good knowledge in HTML5, CSS3, JS and intermediate
-            level in PHP, MYSQL and basic level in using Elementor, Wordpress
-            and have working experience on Linux platform
+            I acquired quite good knowledge in HTML5, CSS3, JS and intermediate
+            level in PHP, MySQL, and basic level in using Elementor, WordPress
+            and have working experience on Linux platform.
           </p>
         </span>
         <span>
@@ -131,7 +126,7 @@
           <div class="progress">
             <div class="progress-value4"></div>
           </div>
-          <label for="lan5">MYSQL</label>
+          <label for="lan5">MySQL</label>
           <div class="progress">
             <div class="progress-value5"></div>
           </div>
@@ -142,55 +137,95 @@
     <section class="Sec04" id="Contact Us">
       <div class="cont">
         <div class="sub-cont">
-          <h1>Love to hear form you</h1>
+          <h1>Love to hear from you</h1>
           <span>
             <p>
-              I always love to hear from you. You guys can reach me through my
-              email address as a primary option or through filling the contact
-              form.
+              I always love to hear from you. You can reach me through my
+              email address as a primary option or by filling the contact form.
             </p>
           </span>
         </div>
         <div class="sub-cont2">
-          <p
-            style="
-              color: rgba(130, 252, 170, 1);
-              font-family: 'PT Sans Narrow', Helvetica, sans-serif;
-              font-size: 1.8vh;
-            "
-          >
+          <p class="input-group">
             Full Name* <input type="text" placeholder="Your Name" />
           </p>
-          <p
-            style="
-              color: rgba(130, 252, 170, 1);
-              font-family: 'PT Sans Narrow', Helvetica, sans-serif;
-              font-size: 1.8vh;
-            "
-          >
-            Email Adress*
-            <input
-              type="email"
-              name="Email"
-              id="Uni"
-              placeholder="Email Adress"
-            />
+          <p class="input-group">
+            Email Address* <input type="email" name="Email" placeholder="Email Address" />
           </p>
-          <p
-            style="
-              color: rgba(130, 252, 170, 1);
-              font-family: 'PT Sans Narrow', Helvetica, sans-serif;
-              font-size: 1.8vh;
-            "
-          >
-            Message*
-            <textarea name="msg" id="msg" placeholder="Message here"></textarea>
+          <p class="input-group">
+            Message* <textarea name="msg" id="msg" placeholder="Message here"></textarea>
           </p>
           <input type="submit" value="SUBMIT" />
         </div>
       </div>
     </section>
 
-    <script src="portfolio.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        serverTimestamp,
+      } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCTfcH1CCo2u8UEglGPV3vtOUaHnwZqNGY",
+        authDomain: "irfan-portfolio-56725.firebaseapp.com",
+        projectId: "irfan-portfolio-56725",
+        storageBucket: "irfan-portfolio-56725.appspot.com",
+        messagingSenderId: "666356546617",
+        appId: "1:666356546617:web:223d29a7f7db2aabae21e8",
+        measurementId: "G-SKVCTJGH2R",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const db = getFirestore(app);
+
+      // Grab your inputs and submit button
+      const submitBtn = document.querySelector('input[type="submit"]');
+      const nameInput = document.querySelector('.sub-cont2 input[type="text"]');
+      const emailInput = document.querySelector(
+        '.sub-cont2 input[type="email"]'
+      );
+      const msgInput = document.querySelector(".sub-cont2 textarea");
+
+      // Handle clicks on “SUBMIT”
+      submitBtn.addEventListener("click", async (e) => {
+        e.preventDefault();
+
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const message = msgInput.value.trim();
+
+        if (!name || !email || !message) {
+          alert("Please fill in all fields before submitting.");
+          return;
+        }
+
+        try {
+          await addDoc(collection(db, "contacts"), {
+            name,
+            email,
+            message,
+            createdAt: serverTimestamp(),
+          });
+          alert("✅ Thank you! Your message has been sent.");
+
+          // clear the form
+          nameInput.value = "";
+          emailInput.value = "";
+          msgInput.value = "";
+        } catch (err) {
+          console.error("Firestore error:", err);
+          alert("❌ Oops, something went wrong. Please try again later.");
+        }
+      });
+    </script>
   </body>
 </html>
