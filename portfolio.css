@@ -364,8 +364,8 @@ input:focus, textarea:focus {
     .img {
         position:relative;
         left: 90px;
-        top: 450px;
-        width: 70%;
+        top: 400px;
+        width: 50%;
     }
     .Sec02 .container {
         flex-direction: column;
@@ -451,12 +451,12 @@ input:focus, textarea:focus {
     .heading01 {
         font-size: 20px;
         top: 14px;
-        left: 100px;
+        left: 90px;
     }
     .heading03 {
         font-size: 16px;
         top: 180px;
-        left: 120px;
+        left: 110px;
     }
     .img {
         width: 80%;
