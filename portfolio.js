@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const webDevElement = document.querySelector('.web-dev');
     const colors = ['#FF5733', '#33FF57', '#3357FF', '#F1C40F', '#9B59B6'];
     let colorIndex = 0;
-    const text = "Web Developer";
+    const text = "Software Engineer";
     let index = 0;
     let forward = true;
 
