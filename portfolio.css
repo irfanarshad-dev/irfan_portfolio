@@ -159,11 +159,11 @@ nav a:hover {
     color: rgba(130, 252, 170, 1);
     font-style: normal;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 13px;
 }
 .box2 h3, ul li {
     color: silver;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 /* ======================
@@ -192,7 +192,7 @@ nav a:hover {
 }
 .Sec03 span p {
     font-family: 'PT Sans Narrow', Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     text-align: justify;
     padding-left: 20px;
     padding-right: 30px;
